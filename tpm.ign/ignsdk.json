@@ -1,0 +1,21 @@
+{
+  "config" : { 
+		"debug" : true,
+		"websecurity" : true,
+		"name" : "Tea Module Installer"
+  },
+  "window" : { 
+		"transparent" : false, 
+		"noframe" : false, 
+		"fullscreen" : false,
+		"maximize" : true,
+		"width" : 1024,
+		"height" : 600
+	},
+  "button" : [
+		"back",
+		"forward",
+		"stop",
+		"reload"
+	]
+}

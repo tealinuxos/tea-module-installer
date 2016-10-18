@@ -1,0 +1,415 @@
+<html>
+
+<head>
+
+	<link rel="stylesheet" href="extension/image-picker-master/image-picker/image-picker.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script>
+		var programming = ["Android Studio", "gcc & g++", "apache2", "php7", "MySQL Server", "PyCharm Community", "Atom", "NodeJs", "Geany", "MonoDevelop", "Brackets", "Netbeans", "Eclipse", "Qt Open Source", "CodeBlocks", "Git"];
+
+		var pi = [];
+		pi[0] = "androidstudio.png";
+		pi[1] = "build-essential.png";
+		pi[2] = "Apache.png";
+		pi[3] = "PHP.png";
+		pi[4] = "MySQL.png";
+		pi[5] = "pycharm.png";
+		pi[6] = "atom.png";
+		pi[7] = "Nodejs.png";
+		pi[8] = "Geany.png";
+		pi[9] = "MonoDevelop.png";
+		pi[10] = "bracket.png";
+		pi[11] = "netbeans.png";
+		pi[12] = "Eclipse.png";
+		pi[13] = "qt.png";
+		pi[14] = "codeblocks.png"
+		pi[15] = "git.png"
+		var pd = [];
+		pd[0] =
+			"The Official IDE for Android <br >Android Studio provides the fastest tools for building apps on every type of Android device. <br />World-class code editing, debugging, performance tooling, a flexible build system, and an instant build/deploy system all allow you to focus on building unique and high quality apps.";
+		pd[1] = "C and C++ compiler";
+		pd[2] =
+			"Apache is the most widely used web server software.<br />Developed and maintained by Apache Software Foundation, Apache is an open source software available for free. It runs on 67% of all webservers in the world. It is fast, reliable, and secure.<br />It can be highly customized to meet the needs of many different environments by using extensions and modules. Most WordPress hosting providers use Apache as their web server software. However, WordPress can run on other web server software as well.";
+		pd[3] =
+			"PHP is a server-side scripting language designed for web development but also used as a general-purpose programming language.<br />Originally created by Rasmus Lerdorf in 1994, the PHP reference implementation is now produced by The PHP Group. PHP originally stood for Personal Home Page, but it now stands for the recursive backronym PHP: Hypertext Preprocessor.<br />PHP code may be embedded into HTML code, or it can be used in combination with various web template systems, web content management system and web frameworks. PHP code is usually processed by a PHP interpreter implemented as amodule in the web server or as a Common Gateway Interface (CGI) executable.";
+		pd[4] =
+			"MySQL is the world's most popular open source database.<br />MySQL is a popular choice of database for use in web applications, and is a central component of the widely used LAMPopen-source web application software stack (and other \"AMP\" stacks). LAMP is an acronym for \"Linux, Apache, MySQL,Perl/PHP/Python\". Free-software open-source projects that require a full-featured database management system often use MySQL.<br />With its proven performance, reliability and ease-of-use, MySQL has become the leading database choice for web-based applications, used by high profile web properties including Facebook, Twitter, YouTube, Yahoo! and many more.<br />Oracle drives MySQL innovation, delivering new capabilities to power next generation web, cloud, mobile and embedded applications.";
+		pd[5] =
+			"PyCharm is an Integrated Development Environment (IDE) used for programming in Python. It provides code analysis, a graphical debugger, an integrated unit tester, integration with version control systems (VCSes), and supports web development with Django. PyCharm is developed by the Czech company JetBrains";
+		pd[6] = "Atom is a text editor that's modern, approachable, yet hackable to the core—a tool you can customize to do anything but also use productively without ever touching a config file.";
+		pd[7] =
+			"Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js' package ecosystem, npm, is the largest ecosystem of open source libraries in the world.";
+		pd[8] =
+			"Geany is a small and lightweight Integrated Development Environment.<br />It was developed to provide a small and fast IDE, which has only a few dependencies from other packages. Another goal was to be as independent as possible from a special Desktop Environment like KDE or GNOME - Geany only requires the GTK2 runtime libraries.<br />Geany is known to run under Linux, FreeBSD, NetBSD, OpenBSD, MacOS X, AIX v5.3, Solaris Express and Windows. More generally, it should run on every platform, which is supported by the GTK libraries.";
+		pd[9] =
+			"MonoDevelop is an open source integrated development environment for Linux, OS X, and Windows.<br />Its primary focus is development of projects that use Mono and .NET frameworks. MonoDevelop integrates features similar to those of NetBeans and Microsoft Visual Studio, such as automatic code completion, source control, a graphical user interface (GUI) and Web designer. MonoDevelop integrates a Gtk# GUI designer called Stetic.<br />It supports Boo, C, C++, C#, CIL, D, F#, Java, Oxygene, Vala, and Visual Basic.NET.";
+		pd[10] =
+			"Brackets is a free open-source editor written in HTML, CSS, and JavaScript with a primary focus on Web Development.<br />It was created by Adobe Systems, licensed under the MIT License, and is currently maintained on GitHub. Brackets is available for cross-platform download on Mac, Windows, and Linux.<br />Brackets is a lightweight, yet powerful, modern text editor. We blend visual tools into the editor so you get the right amount of help when you want it. With new features and extensions released every 3-4 weeks, it's like getting presents all year long.";
+		pd[11] = " Quickly and easily develop desktop, mobile and web applications with Java, JavaScript, HTML5, PHP, C/C++ and more. NetBeans IDE is FREE, open source, and has a worldwide community of users and developers.";
+		pd[12] =
+			"Eclipse is a platform that has been designed from the ground up for building integrated web and application development tooling.<br />By design, the platform does not provide a great deal of end user functionality by itself. The value of the platform is what it encourages: rapid development of integrated features based on aplug-in model.<br /> Eclipse provides a common user interface (UI) model for working with tools.  It is designed to run on multiple operating systems while providing robust integration with each underlying OS.  Plug-ins can program to the Eclipse portable APIs and run unchanged on any of the supported operating systems. ";
+		pd[13] =
+			"Qt is a cross-platform application framework that is widely used for developing application software that can be run on various software and hardware platforms with little or no change in the underlying codebase, while still being a native application with the capabilities and speed thereof.";
+		pd[14] = "Codeblocks is a cross-platform IDE built around wxWidgets, designed to be extensible and configurable. Runs on Windows and Linux.";
+		pd[15] =
+			"Git is popular version control system designed to handle very large projects with speed and efficiency; it is used for many high profile open source projects, most notably the Linux kernel.<br /><br />Git falls in the category of distributed source code management tools. Every Git working directory is a full-fledged repository with full revision tracking capabilities, not dependent on network access or a central server.<br /><br />This package provides the git main components with minimal dependencies. Additional functionality, e.g. a graphical user interface and revision tree visualizer, tools for interoperating with other VCS's, or a web interface, is provided as separate git* packages."
+		pid = [];
+		pid[0] = "adroid-studio.tar.gz";
+		pid[1] = "g++.tea";
+		pid[2] = "apache2.tea";
+		pid[3] = "php.tea,php-mysql.tea";
+		pid[4] = "mysql-server.tea";
+		pid[5] = "pycharm.tar.gz";
+		pid[6] = "atom.tea";
+		pid[7] = "nodejs.tea";
+		pid[8] = "geany.tea";
+		pid[9] = "monodevelop.tea";
+		pid[10] = "brackets.tea";
+		pid[11] = "netbeans.sh";
+		pid[12] = "eclipse.tea";
+		pid[13] = "qt.run";
+		pid[14] = "codeblocks.tea";
+		pid[15] = "git.tea"
+
+		var multimedia = ["Blender 3D", "Inkscape", "GIMP", "Audacity", "LMMS", "Ardour", "Synfig", "Darktable", "FFMPEG", "Krita"];
+		var mi = [];
+		mi[0] = "Blender.png";
+		mi[1] = "Inkscape.png";
+		mi[2] = "GIMP.png";
+		mi[3] = "Audacity.png";
+		mi[4] = "LMMS.png";
+		mi[5] = "Ardour.png";
+		mi[6] = "Synfig.png";
+		mi[7] = "Darktable.png";
+		mi[8] = "FFMPEG.png";
+		mi[9] = "Krita.png";
+		var md = [];
+		md[0] =
+			"Blender is the free and open source 3D creation suite.It supports the entirety of the 3D pipeline—modeling, rigging, animation, simulation, rendering, compositing and motion tracking, even video editing and game creation. <br /> Advanced users employ Blender’s API for Python scripting to customize the application and write specialized tools; often these are included in Blender’s future releases. Blender is well suited to individuals and small studios who benefit from its unified pipeline and responsive development process.";
+		md[1] =
+			"Inkscape is an open-source vector graphics editor similar to Adobe Illustrator, Corel Draw, Freehand, or Xara X. What sets Inkscape apart is its use of Scalable Vector Graphics (SVG), an open XML-based W3C standard, as the native format.<br /> The design process may begin by doodles on a napkin, a sketched mindmap, a photo of a memorable object, or a mockup in software which really wouldn't work to complete the project.  Inkscape can take you from this stage to a final, professional-grade design format which is ready for publication on the web or in physical form.<br />If you are new to the process of creating vector graphics it may feel different, but you will quickly be pleased by the flexibility, and power Inkscape offers. Vector design is often the preferred method of image creation for logos, illustrations and art which require high scalability. The Inkscape application is used cross a wide variety of industries (marketing/branding, engineering/CAD, web graphics, cartooning) and individual uses.";
+		md[2] =
+			"This is the official website of the GNU Image Manipulation Program (GIMP). GIMP similar to Adobe Photoshop.<br />GIMP is a cross-platform image editor available for GNU/Linux, OS X, Windows and more operating systems. It is free software, you can change its source code and distribute your changes.<br />Whether you are a graphic designer, photographer, illustrator, or scientist, GIMP provides you with sophisticated tools to get your job done. You can further enhance your productivity with GIMP thanks to many customization options and 3rd party plugins.";
+		md[3] =
+			"Audacity is free software. You may use it for any personal, commercial or educational purpose, including installing it on as many different computers as you wish. It similar to winamp.<br />Audacity can record live audio through a microphone or mixer, ordigitize recordings from other media. With some sound cards, and on any recent version of Windows, Audacity can also capturestreaming audio.<br />Import sound files, edit them, and combine them with other files or new recordings. Export your recordings in many different file formats, including multiple files at once.";
+		md[4] =
+			"Linux MultiMedia Studio  is a free digital audio workstation. Music can be produced by synthesizing sounds, arranging samples, and playing on a MIDI keyboard by combining the features of trackers, sequencers and synthesizers. It supports LADSPA, SF2 files and VST plugins.<br />Produce music with your computer by creating melodies and beats, synthesizing and mixing sounds, arranging samples and much more.<br />Playback instruments, samples and pluginswith a typing or MIDI keyboard in a user-friendly and modern interface.<br />Bundled with ready-to-use stuff from an assortment of instrument and effect plugins, presets and samples to VST and SoundFont support.";
+		md[5] =
+			"Ardour is an open source, collaborative effort of a worldwide team including musicians, programmers, and professional recording engineers.<br />Development is transparent — anyone can watch our work as it happens. Like a good piece of vintage hardware, you can open the box and look inside. Of course, you don't have to … but one day the fact that anybody can will be useful.<br />This openness forces a kind of integrity on the project that is hard to find in proprietary software, and helps us to focus on issues and features that matter to our users rather than stuff that just looks good in advertisements.";
+		md[6] =
+			"Synfig Studio is a free and open-source 2D animation software, designed as powerful industrial-strength solution for creating film-quality animation using a vector and bitmap artwork.<br />It eliminates the need to create animation frame-by frame, allowing you to produce 2D animation of a higher quality with fewer people and resources. Synfig Studio is available for Windows, Linux and MacOS X.";
+		md[7] =
+			"Darktable is an open source photography workflow application and RAW developer.<br />A virtual lighttable and darkroom for photographers. It manages your digital negatives in a database, lets you view them through a zoomable lighttable and enables you to develop raw images and enhance them.";
+		md[8] =
+			"FFmpeg is the leading multimedia framework, able to decode, encode, transcode, mux, demux, stream, filter and play pretty much anything that humans and machines have created.<br />It supports the most obscure ancient formats up to the cutting edge. No matter if they were designed by some standards committee, the community or a corporation. It is also highly portable: FFmpeg compiles, runs, and passes our testing infrastructure FATE across Linux, Mac OS X, Microsoft Windows, the BSDs, Solaris, etc. under a wide variety of build environments, machine architectures, and configurations.";
+		md[9] =
+			"Krita is a FREE sketching and painting program. It was created with the following types of art in mind:<br />concept art<br />texture or matte painting<br />illustrations and comics<br /><br />Krita is a FREE and open source painting tool designed for concept artists, illustrators, matte and texture artists, and the VFX industry. Krita has been in development for over 10 years and has had an explosion in growth recently. It offers many common and innovative features to help the amateur and professional alike.";
+		var mid = [];
+		mid[0] = "blender.tea";
+		mid[1] = "inkscape.tea";
+		mid[2] = "gimp.tea";
+		mid[3] = "audacity.tea";
+		mid[4] = "lmms.tea";
+		mid[5] = "ardour.tea";
+		mid[6] = "synfig.tea";
+		mid[7] = "darktable.tea";
+		mid[8] = "ffmpeg.tea";
+		mid[9] = "krita.tea";
+		var networking = ["Virtualbox", "Traceroute", "Remote desktop viewer", "Wireshark", "Gigolo"];
+		var ni = [];
+		ni[0] = "VirtualBox.png";
+		ni[1] = "traceroute.png";
+		ni[2] = "Remina.png";
+		ni[3] = "Wireshark.png";
+		ni[4] = "Gigolo.png";
+		var nd = [];
+		nd[0] =
+			"VirtualBox is a cross-platform virtualization application.<br />What does that mean? For one thing, it installs on your existing Intel or AMD-based computers, whether they are running Windows, Mac, Linux or Solaris operating systems. Secondly, it extends the capabilities of your existing computer so that it can run multiple operating systems (inside multiple virtual machines) at the same time. <br />You can run Windows and Linux on your Mac, run Windows Server 2008 on your Linux server, run Linux on your Windows PC, and so on, all alongside your existing applications. You can install and run as many virtual machines as you like -- the only practical limits are disk space and memory.";
+		nd[1] =
+			"Traceroute is a utility that records the route (the specific gateway computers at each hop) through the Internet between your computer and a specified destination computer.<br />It also calculates and displays the amount of time each hop took. Traceroute is a handy tool both for understanding where problems are in the Internet network and for getting a detailed sense of the Internet itself. Another utility, PING, is often used prior to using traceroute to see whether a host is present on the network.";
+		nd[2] =
+			"Remmina is a remote desktop client written in GTK+, aiming to be useful for system administrators and travellers, who need to work with lots of remote computers in front of either large monitors or tiny netbooks.<br />Remmina supports multiple network protocols in an integrated and consistent user interface. Currently RDP, VNC, NX, XDMCP and SSH are supported.<br />Features of remina like Maintain a list of connection profiles, organized by groups, make quick connections by directly putting in the server address, Tray icon, allows you to quickly access configured connection profiles, remote desktops with higher resolutions are scrollable/scalable in both window and fullscreen mode, etc.";
+		nd[3] =
+			"Wireshark is the world's foremost network protocol analyzer.<br />It lets you see what's happening on your network at a microscopic level. It is the de facto (and often de jure) standard across many industries and educational institutions.<br />Here are some examples people use Wireshark for:<br />Network administrators use it to troubleshoot network problems<br />Network security engineers use it to <br />examine security problems<br />Developers use it to debug protocol implementations<br />People use it to learn network protocol internals<br /><br />Beside these examples Wireshark can be helpful in many other situations too.";
+		nd[4] =
+			"Gigolo is a frontend to easily manage connections to remote filesystems using GIO/GVfs.<br />You can use it as Windows enable approvals and save as a bookmark. Particularly useful is the program if the respective standard file manager does not offer its own functions for integration.<br />Supported file systems:<br />Samba or (Windows) releases<br />FTP and SFTP<br />WebDAV (also viahttps://)<br />GNOME trash (trash://)<br />Recording Programs (burn://)<br />Digital cameras (gphoto2://)";
+		var nid = [];
+		nid[0] = "virtualbox.tea";
+		nid[1] = "traceroute.tea";
+		nid[2] = "remmina.tea";
+		nid[3] = "wireshark.tea";
+		nid[4] = "gigolo.tea";
+	</script>
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="titles  back_title">
+			Tea Module Installer
+		</div>
+	</div>
+	<div class="sidebar col-sm-2">
+		<!--<div class="left">
+			<div class="logo col-lg-4">
+
+			</div>
+			<div class="logo col-lg-4">
+
+			</div>
+			<div class="logo col-lg-4">
+
+			</div>
+
+		</div>-->
+		<div class="nav">
+
+			<ul>
+				<li><a href="#" onclick="selectAll('all');">All</a></li>
+				<li><a href="#programming" onclick="selectAll('pros');">Programing</a></li>
+				<li><a href="#multimedia" onclick="selectAll('mms');">Multimedia</a></li>
+				<li><a href="#networking" onclick="selectAll('nets');">Networking</a></li>
+			</ul>
+			<a href="#" class="btn btn-success" style="border-radius:0;width:100%;" onclick="ambilSelect()">Install</a>
+		</div>
+		<div class="button">
+
+		</div>
+	</div>
+	<div class="wrap">
+
+		<div class="col-sm-10 col-sm-offset-2">
+
+			<div class="content" style="margin-top:50px;">
+				<div class="row" id="programming">
+					<h2>Programming</h2>
+					<select multiple="multiple" class="image-picker show-html" id="pros">
+
+						<script>
+							for(i=0;i<programming.length;i++){
+								document.write('<option data-img-src="images/Programming/'+pi[i]+'" value="'+pid[i]+'">2</option>');
+							}
+						</script>
+					</select>
+				</div>
+				<div class="row" id="multimedia">
+					<h2>Multimedia</h2>
+					<select multiple="multiple" class="image-picker show-html" id="mms">
+					<script>
+						for(i=0;i<multimedia.length;i++){
+							document.write('<option data-img-src="images/multimedia/'+mi[i]+'" value="'+mid[i]+'">2</option>');
+						}
+					</script>
+				</select>
+				</div>
+				<diiv class="row" id="networking">
+					<h2>Networking</h2>
+					<select multiple="multiple" class="image-picker show-html" id="nets">
+					<script>
+						for(i=0;i<networking.length;i++){
+							document.write('<option data-img-src="images/networking/'+ni[i]+'" value="'+nid[i]+'">2</option>');
+						}
+					</script>
+				</select>
+				</diiv>
+				<!--<option data-img-src="images/1.png" value="android-studio">1</option>
+				  <option data-img-src="images/2.png" value="bracket">2</option>
+				  <option data-img-src="images/3.jpg" value="dart">3</option>
+				  <option data-img-src="images/4.jpg" value="lazarus">4</option>
+				  <option data-img-src="images/5.png" value="pencil">5</option>
+				  <option data-img-src="images/1.png" value="qt-creator">6</option>
+				  <option data-img-src="images/2.png" value="anjuta">7</option>
+				  <option data-img-src="images/3.jpg" value="aptana">8</option>
+				  <option data-img-src="images/4.jpg" value="bluefish">9</option>
+				  <option data-img-src="images/5.png" value="gambas">10</option>
+				  <option data-img-src="images/1.png" value="geany">11</option>
+				  <option data-img-src="images/2.png" value="glade">12</option>
+				  <option data-img-src="images/3.png" value="greenfoot">13</option>
+				  <option data-img-src="images/4.png" value="kompozer">14</option>
+				  <option data-img-src="images/5.png" value="netbeans">15</option>
+				  <option data-img-src="images/1.png" value="pycharm">16</option>
+				  <option data-img-src="images/3.png" value="codeblock">17</option>-->
+
+				</select>
+				<!--<div class="apps col-lg-3 blue">
+					<div class="img">
+
+					</div>
+					<center><h2>Netbeans IDE</h2></center><br /><br /><br />
+					<div class="button">
+						<a href="#" class="btn">Install</a>
+					</div>
+
+				</div>
+				<div class="apps col-lg-3 blue">
+					<div class="img">
+
+					</div>
+					<center><h2>Netbeans IDE</h2></center><br /><br /><br />
+					<div class="button">
+						<a href="#" class="btn">Install</a>
+					</div>
+
+				</div>
+				<div class="apps col-lg-3 blue">
+					<div class="img">
+
+					</div>
+					<center><h2>Netbeans IDE</h2></center><br /><br /><br />
+					<div class="button">
+						<a href="#" class="btn">Install</a>
+					</div>
+
+				</div>
+				<div class="apps col-lg-3 blue">
+					<div class="img">
+
+					</div>
+					<center><h2>Netbeans IDE</h2></center><br /><br /><br />
+					<div class="button">
+						<a href="#" class="btn">Install</a>
+					</div>
+
+				</div>-->
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+							</div>
+							<div class="modal-body">
+								<div id="apps_detail"></div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="extension/image-picker-master/image-picker/image-picker.min.js"></script>
+	<script>
+		var fs = ign.filesystem();
+		var ign = ign.sys();
+		//var fs ="";
+		//var ign = "";
+		var str = fs.homePath();
+		var res = str.split("/");
+		var user = res[2];
+		//var user = "ofaasd";
+		var apps = "/opt/module-manager/module-install";
+		var cdlocate = "/media/" + user + "/tealinuxos/idepack";
+
+
+
+
+		// Initialize the object
+		$("select").imagepicker();
+		$('#list li:eq(1)').after('<li>Position 3</li>');
+
+		for (i = 0; i < programming.length; i++) {
+			$(".thumbnails  li:eq(" + i + ") .thumbnail").append('<center><p>' + programming[i] +
+				'</p></center><div class="row" style="margin:0;"><small style="float:left;"></small><a href="javascript:void(0)" class="btn btn-primary" style="float:right;" data-toggle="modal" onclick="pro(' + i + ')" data-target="#myModal">Detail</a></div>');
+		}
+		for (i = 0; i < multimedia.length; i++) {
+			$(".thumbnails  li:eq(" + (i + 16) + ") .thumbnail").append('<center><p>' + multimedia[i] +
+				'</p></center><div class="row" style="margin:0;"><small style="float:left;"></small><a href="javascript:void(0)" class="btn btn-primary" style="float:right;" data-toggle="modal" onclick="mm(' + i + ')" data-target="#myModal">Detail</a></div>');
+		}
+		for (i = 0; i < networking.length; i++) {
+			$(".thumbnails  li:eq(" + (i + 26) + ") .thumbnail").append('<center><p>' + networking[i] +
+				'</p></center><div class="row" style="margin:0;"><small style="float:left;"></small><a href="javascript:void(0)" class="btn btn-primary" style="float:right;" data-toggle="modal" onclick="net(' + i + ')" data-target="#myModal">Detail</a></div>');
+		}
+
+		function ambilSelect() {
+			//$("#install").html("Uninstall");
+			if (fs.isDirectory(cdlocate) == false) {
+				alert("DVD Tidak Ditemukan " + cdlocate);
+			} else {
+				//alert(apps+" "+$("#apps").val()+","+$("#apps2").val()+","+$("#apps3").val());
+				ign.exec(apps + " " + user + " " + $("#pros").val() + "," + $("#mms").val() + "," + $("#nets").val());
+			}
+		}
+
+		function pro(id) {
+			$("#apps_detail").html(pd[id]);
+			$(".modal-title").html(programming[id]);
+		}
+
+		function mm(id) {
+			$("#apps_detail").html(md[id]);
+			$(".modal-title").html(multimedia[id]);
+		}
+
+		function net(id) {
+			$("#apps_detail").html(nd[id]);
+			$(".modal-title").html(networking[id]);
+		}
+
+		function getLength(attr) {
+			if (attr == "pros") {
+				return programming.length;
+			} else if (attr == "mms") {
+				return multimedia.length;
+			} else {
+				return networking.length;
+			}
+		}
+
+		function getSelected(attr) {
+			var foo = [];
+			$('#' + attr + ' :selected').each(function(i, selected) {
+				foo[i] = $(selected).text();
+			});
+			return foo;
+		}
+
+		function selectAll(element) {
+			$(document).ready(function() {
+				if (element == "all") {
+					//alert("all");
+					jumlah = getLength("pros") + getLength("mms") + getLength("nets");
+					jumlah2 = getSelected("pros").length + getSelected("mms").length + getSelected("nets").length
+					if (jumlah2 == 0 || jumlah != jumlah2) {
+						$("#pros option").prop('selected', true);
+						$("#mms option").prop('selected', true);
+						$("#nets option").prop('selected', true);
+						$("#pros").data('picker').sync_picker_with_select();
+						$("#mms").data('picker').sync_picker_with_select();
+						$("#nets").data('picker').sync_picker_with_select();
+
+					} else if (jumlah == jumlah2) {
+						$("#pros option").prop('selected', false);
+						$("#mms option").prop('selected', false);
+						$("#nets option").prop('selected', false);
+						$("#pros").data('picker').sync_picker_with_select();
+						$("#mms").data('picker').sync_picker_with_select();
+						$("#nets").data('picker').sync_picker_with_select();
+
+					}
+				} else {
+					// if($("#"+element+" option:selected").val()){
+					// 	alert(getSelected(element).length + " " +getLength(element));
+					// }else{
+					// 	alert("kosong");
+					// }
+					if (getSelected(element).length == 0 || getSelected(element).length != getLength(element)) {
+						$("#" + element + " option").prop('selected', true);
+						$("#" + element).data('picker').sync_picker_with_select();
+
+					} else if (getSelected(element).length == getLength(element)) {
+						$("#" + element + " option").prop('selected', false);
+						$("#" + element).data('picker').sync_picker_with_select();
+
+					}
+				}
+			});
+		}
+	</script>
+</body>
+
+</html>
