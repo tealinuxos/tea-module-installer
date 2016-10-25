@@ -1,0 +1,3 @@
+#!/bin/bash
+
+pkexec /opt/module-manager/module-install.py $1 $2
